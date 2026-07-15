@@ -1,0 +1,69 @@
+/******************************************************************************
+ * ROFI Color theme
+ * User: Deley
+ ******************************************************************************/
+
+* {
+    solar-base03:      #002b36;
+    solar-base02:      #073642;
+    solar-base01:      #586875;
+    solar-base00:      #657b83;
+    solar-base0:       #839496;
+    solar-base1:       #93a1a1;
+    solar-yellow:      #b58900;
+    solar-orange:      #cb4b16;
+
+    background-color:  @solar-base03;
+    text-color:        @solar-base0;
+    border-color:      @solar-base03;
+    font:              "Mono 10";
+}
+
+window {
+    anchor:            north;
+    location:          north;
+    width:             100%;
+    padding:           3px 6px;
+    children:          [ horibox ];
+}
+
+horibox {
+    orientation:       horizontal;
+    children:          [ prompt, entry, listview ];
+}
+
+listview {
+    layout:            horizontal;
+    spacing:           10px;
+    lines:             100;
+}
+
+entry {
+    expand:            false;
+    width:             10em;
+    text-color:        @solar-base1;
+}
+
+prompt {
+    padding:           0px 4px;
+    text-color:        @solar-yellow;
+}
+
+element {
+    padding:           0px 6px;
+}
+
+element normal normal {
+    background-color:  @solar-base03;
+    text-color:        @solar-base0;
+}
+
+element selected normal {
+    background-color:  @solar-base02;
+    text-color:        @solar-base1;
+}
+
+element-text, element-icon {
+    background-color:  inherit;
+    text-color:        inherit;
+}
